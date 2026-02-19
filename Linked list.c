@@ -1,5 +1,4 @@
 // Singli Linked List 
-// Singli Linklist 
 
 #include<stdio.h>
 #include<stdlib.h>
