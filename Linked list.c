@@ -1,4 +1,5 @@
-// Singli Linked List 
+// Singli Linked List insert at begining 
+// insert at ending 
 
 #include<stdio.h>
 #include<stdlib.h>
