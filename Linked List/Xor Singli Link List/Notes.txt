@@ -1,0 +1,139 @@
+------------------------------------  Page 1  ------------------------------------
+
+        10
+         |
+         v
+
+   +---------+    +---------+    +---------+    +---------+
+   |  A |0^20| -> |  B |10^30| ->|  C |20^40| ->|  D |30^0|
+   +---------+    +---------+    +---------+    +---------+
+       10              20              30              40
+
+
+Dekho abhi mujhe start se end tak traverse
+karna hai to mai kya karu ga
+
+P.A ^ C.N.A         N.A
+
+0 ^ 0 ^ 20  = 20          10 address ka next chahiye
+10 ^ 10 ^ 30 = 30         20 address ka next chahiye
+20 ^ 20 ^ 40 = 40         30 address ka next chahiye
+
+
+Dekho abhi mujhe end se start tak traverse
+karna hai to mai kya karu ga
+
+30 ^ 0 ^ 0   = 30         40 address ka left side bala chahiye
+30 ^ 40 ^ 40 = 20         30 address ka left side bala chahiye
+10 ^ 30 ^ 30 = 10         20 address ka left side bala chahiye
+
+
+Q1.
+
+0 ^ 20   = 10100
+           00000
+           -----
+           10100   = 20
+
+
+Q2.
+
+10 ^ 30  = 01010
+           11110
+           -----
+           10100   = 20
+
+
+Q3.
+
+20 ^ 40  = 10100
+           010100
+           ------
+           111100  = 60
+
+
+Q4.
+
+30 ^ 0   = 11110
+           00000
+           -----
+           11110  = 30
+
+
+
+------------------------------------  Page 2  ------------------------------------
+
+Date : 26/02/2026
+
+
+Ek concept hai ^ ka
+Dekho kya hota hai agar a ^ b likha answer hai
+to b ^ a ^ b = a
+
+a ^ a ^ b = b
+
+
+Is concept ki help se hum singly linked list me
+start se end traverse kar sakte hi sath hi
+sath end se start tak bhi traverse
+kar sakte hai
+
+
+Dekho ek more paas linked list hai
+
+
+        10
+         |
+         v
+
+   +---------+    +---------+    +---------+    +---------+
+   |  A |     | ->|  B |     | ->|  C |     | ->|  D |     |
+   +---------+    +---------+    +---------+    +---------+
+       10              20              30              40
+
+
+Ye kuch esa hai dekho abhi hum
+in blank box hum previous node
+ke address ke next node ke address ke
+saath ^ (xor) nikal ke put kar dege
+initially previous node koi hai nahi
+uska address hum 0 manage aur last me
+next node koi hai nahi isliye
+hum usko bhi zero manage
+to humara link list kuch is
+tarah dekhega.
+
+
+
+------------------------------------  Page 3  ------------------------------------
+
+
+        10
+         |
+         v
+
+   +---------+    +---------+    +---------+    +---------+
+   |  A |20 | ->  |  B |20 | ->  |  C |60 | ->  |  D |30 |
+   +---------+    +---------+    +---------+    +---------+
+       10              20              30              40
+
+
+Humne apne observation se next node ka
+address nikalne ka formula banaya
+
+(Next node address) = (Prev node address) ^ (Current node address)
+
+N.N.A = P.N.A ^ C.N.A
+
+
+1)  20 = 0  ^ 20
+2)  30 = 10 ^ 20
+3)  40 = 20 ^ 60
+
+
+1)  30 = 0  ^ 30
+2)  20 = 40 ^ 60
+3)  10 = 30 ^ 20
+
+
+-------------------------------------------------------------------------------
