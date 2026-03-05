@@ -1,6 +1,6 @@
 // Singli Linked List delet at begining 
 // delete at ending 
-Linked List/Singli Linked list/
+
 #include<stdio.h>
 #include<stdlib.h>
 void deleteAtB();
