@@ -27,6 +27,7 @@ void main()
     int n = strlen(input);
 
     reverse(input, n);      // Step 1: reverse input
+    printf("%s\n", input);
 
     while(input[i] != '\0')
     {
@@ -51,7 +52,7 @@ void main()
 
         else
         {
-            while(!isEmpty() && pr(peek()) >= pr(input[i]))
+            while(pr(peek()) >= pr(input[i]))
             {
                 output[k++] = pop();
             }
@@ -61,14 +62,9 @@ void main()
         i++;
     }
 
-    while(!isEmpty())
-    {
-        output[k++] = pop();
-    }
-
     output[k] = '\0';
 
-    reverse(output, k);     // Step 2: reverse output
+    reverse(output, k);   
 
     printf("%s\n", output);
 }
@@ -118,26 +114,24 @@ bool isEmpty()
 
 void reverse(char x[], int n)
 {
-    int i=0, j=n-1;
+    int i=0, j=n-1,k;
     char t;
 
     while(i < j)
     {
+       		
         t = x[i];
         x[i] = x[j];
         x[j] = t;
 
-        if(x[i] == '(')
-            x[i] = ')';
-        else if(x[i] == ')')
-            x[i] = '(';
-
-        if(x[j] == '(')
-            x[j] = ')';
-        else if(x[j] == ')')
-            x[j] = '(';
-
         i++;
         j--;
     }
+	for(k=0;k<n;k++)
+	{
+		if(x[k] == '(')
+            x[k] = ')';
+        else if(x[k] == ')')
+            x[k] = '(';
+	}
 }
