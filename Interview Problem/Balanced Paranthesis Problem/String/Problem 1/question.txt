@@ -1,0 +1,42 @@
+Problem Statement
+
+Input: A string of comma separated numbers. The numbers 5 and 8 are always present in the list, and it is assumed that 8 always comes after 5.
+
+You have to perform the following operations:
+
+Case 1:
+num1 = Sum of all numbers which do not lie between 5 and 8 in the input list.
+
+Case 2:
+num2 = A number formed by concatenating all the numbers from 5 to 8 (including 5 and 8).
+
+Output:
+Print the sum of num1 and num2.
+
+Example
+
+Input:
+3,2,6,5,1,4,8,9
+
+Explanation
+
+Numbers between 5 and 8 are:
+1,4
+
+These numbers are ignored for num1.
+
+Remaining numbers:
+3,2,6,9
+
+num1 = 3 + 2 + 6 + 9 = 20
+
+Numbers from 5 to 8:
+5,1,4,8
+
+Concatenation:
+num2 = 5148
+
+Final Output:
+
+num1 + num2 =
+20 + 5148 = 5168
